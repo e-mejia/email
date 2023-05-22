@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Email from "./components/Email";
 
 function App() {
+  const data = {
+    sender: "React Newsletter",
+    subject: "React Newsletter - issue 36",
+    date: "Jul 15",
+    message: `React Newsletter Issue 3 - July 15th 2016 Read this issue on the web
+          http://reactjsnewsletter.com/issues/36?sid=3QGDYBX ### Comme`,
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Email {...data} />
     </div>
   );
 }
-
 export default App;
